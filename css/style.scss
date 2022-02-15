@@ -1,0 +1,380 @@
+body {
+  direction: rtl;
+  font-family: IRANSansWeb;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.header {
+  background: #2d3436;
+}
+
+.site1-icon {
+  width: 1.17rem;
+}
+
+body {
+  background: #1e1e2f;
+}
+
+.sidebar {
+  background: linear-gradient(0deg ,#ba54f5 ,#e14eca);
+  height: 100%;
+}
+
+.spacer-white {
+  border-bottom: 0.01rem solid rgba(255, 255, 255, 0.4);
+}
+
+.spacer-black {
+  border-top: #2b3553 solid 0.1rem;
+}
+
+.layout-background {
+  background: #27293d;
+}
+
+.top-chart {
+  @extend .layout-background;
+}
+
+.mini-item {
+  @extend .layout-background;
+}
+
+.chart-item {
+  @extend .layout-background;
+}
+
+.sidebar-title {
+  transition: background-color 0.3s ease-in-out;
+}
+
+
+.sidebar-title.active {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-title:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.active-sidebar {
+  justify-content: center;
+}
+
+.active-sidebar .side-text {
+  display: none;
+}
+
+.active-sidebar .side-icon {
+  margin-left: 0 !important;
+}
+
+.info-table {
+  @extend .layout-background;
+}
+
+.user-person {
+  width: 30px;
+}
+
+.search-box input {
+  border-radius: 60px !important;
+  padding-top: 0.2rem !important;
+  padding-bottom: 0.2rem !important;
+}
+
+.search-box input::placeholder {
+  font-size: 0.725rem;
+}
+
+.search-icon {
+  margin-right: -25px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.chart-pie-change-value {
+  padding: 10px;
+}
+
+.chart-pie-change-value:nth-child(2) {
+  padding: 0.625rem 0.75rem;
+}
+
+.chart-pie-change-value:nth-child(3) {
+  padding: 0.625rem 0.75rem;
+}
+
+
+.content-item .author {
+  text-align: center;
+  text-transform: none;
+  height: 100%;
+}
+
+.content-item .author a + p.description {
+  margin-top: -7px
+}
+
+.content-item .author .block {
+  position: absolute;
+  height: 100px;
+  width: 250px
+}
+
+.content-item .author .block.block-one {
+  transform: rotate(150deg);
+  margin-top: -90px;
+  margin-left: -50px;
+  left: 0;
+}
+
+.content-item .author .block.block-one, .content-item .author .block.block-two {
+  background: rgba(225, 78, 202, .6);
+  background: linear-gradient(90deg, rgba(225, 78, 202, .6) 0, rgba(225, 78, 202, 0));
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=10);
+}
+
+.content-item .author .block.block-two {
+  transform: rotate(30deg);
+  margin-top: -40px;
+  margin-left: -100px;
+  left: 0;
+}
+
+.content-item .author .block.block-three {
+  transform: rotate(170deg);
+  margin-top: -70px
+}
+
+.content-item .author .block.block-four, .content-item .author .block.block-three {
+  background: rgba(225, 78, 202, .6);
+  background: linear-gradient(90deg, rgba(225, 78, 202, .6) 0, rgba(225, 78, 202, 0));
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=10);
+  right: -45px;
+}
+
+.content-item .author .block.block-four {
+  transform: rotate(150deg);
+  margin-top: -25px
+}
+
+.author {
+  @extend .layout-background;
+  position: relative;
+  overflow: hidden;
+}
+
+.user-profile-person {
+  width: 180px;
+  border-radius: 50%;
+}
+
+.form {
+  @extend .layout-background;
+}
+
+
+.typography-box {
+  @extend .layout-background;
+}
+
+.widget-box {
+  @extend .layout-background
+}
+
+
+
+.wrapper{
+  position: relative;
+}
+.wrapper .center-line{
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  background: #fff;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+}
+.wrapper .row{
+  display: flex;
+}
+.wrapper .row-1{
+  justify-content: flex-start;
+}
+.wrapper .row-2{
+  justify-content: flex-end;
+}
+.wrapper .row section{
+  @extend .layout-background;
+  border-radius: 5px;
+  width: calc(50% - 40px);
+  padding: 20px;
+  position: relative;
+}
+.wrapper .row section::before{
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  @extend .layout-background;
+  top: 28px;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+.row-1 section::before{
+  right: -7px;
+}
+.row-2 section::before{
+  left: -7px;
+}
+.row section .icon,
+.center-line .scroll-icon{
+  position: absolute;
+  background: #e66ad2;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 17px;
+}
+.center-line .scroll-icon{
+  bottom: 0px;
+  left: 50%;
+  font-size: 25px;
+  transform: translateX(-50%);
+}
+.row-1 section .icon{
+  top: 15px;
+  right: -60px;
+}
+.row-2 section .icon{
+  top: 15px;
+  left: -60px;
+}
+.row section .details,
+.row section .bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.row section .details .title{
+  font-size: 1rem;
+  font-weight: 600;
+}
+.row section p{
+  margin: 10px 0 17px 0;
+}
+
+@media(max-width: 790px){
+  .wrapper .center-line{
+    left: 40px;
+  }
+  .wrapper .row{
+    margin: 0px 0 3px 60px;
+  }
+  .wrapper .row section{
+    width: 100%;
+  }
+  .row-1 section::before{
+    left: -7px;
+  }
+  .row-1 section .icon{
+    left: -60px;
+  }
+}
+@media(max-width: 440px){
+  .wrapper .center-line,
+  .row section::before,
+  .row section .icon{
+    display: none;
+  }
+  .wrapper .row{
+    margin: 0px 0 10px;
+  }
+}
+
+
+
+.log-reg {
+  max-width: 400px !important;
+  margin: auto;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .mobile-menu {
+    display: block;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+
+  .container {
+    padding: 0.3125rem;
+  }
+
+  html {
+    font-size: 70%;
+  }
+
+  .sidebar-title {
+    justify-content: center;
+  }
+
+  .sidebar-title .side-text {
+    display: none;
+  }
+
+  .sidebar-title .side-icon {
+    margin-left: 0 !important;
+  }
+
+  .dpad {
+    padding: 0.625rem !important;
+  }
+
+  .slide-container {
+    height: 20vh;
+  }
+
+  .d-none {
+    display: none !important;
+  }
+
+  .d-grid {
+    display: grid !important;
+  }
+
+  .form {
+    padding: 0.625rem !important;
+  }
+
+  .author {
+    padding: 1.25rem !important;
+  }
+
+  .m-0 {
+    margin: 0 !important;
+  }
+
+}
+
+#signInForm {
+  display: none;
+}

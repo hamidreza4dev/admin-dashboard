@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link rel="stylesheet" href="css/Chart.min.css">
+    <link rel="stylesheet" href="css/zcss.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<div class="container">
+
+    <div class="navbar white mtb-1 d-flex jc-space-between ai-center">
+        <div class="d-flex c-gap-2 ai-center">
+            <div>
+                <img src="img/mike.jpg" class="b-xl user-person">
+            </div>
+            <h1 class="fn-size-3 m-0"> داشبورد من </h1>
+        </div>
+
+        <div class="d-flex c-gap-2 ai-center desktop-menu">
+            <button class="btn btn-sm gradient-primary b-xl" onclick="openIt()"> حساب کاربری </button>
+
+            <div class="search-box d-flex ai-center">
+                <input type="text" placeholder="جست جو ..." class="ptb-1">
+                <span class="search-icon fn-size-3">
+                    <i class="fa fa-search"></i>
+                </span>
+            </div>
+
+            <div>
+                <span class="fn-size-6 mr-1 cur-pointer">
+                    <i class="fa fa-heartbeat color-light-warning" onclick="modelNotif()"></i>
+                </span>
+            </div>
+
+        </div>
+
+        <span class="fn-size-10 mobile-menu pl-2" onclick="resNav()">
+            <i class="fa fa-bars white"></i>
+        </span>
+
+    </div>
+
+    <div class="main grid-0 c-gap-0 p-0">
+
+        <div class="side d-flex fd-column">
+
+            <div class="d-flex ai-center p-2 gradient-default mb-1 b-sm sidebar-title">
+                <span class="white ml-1 side-icon">
+                    <img src="img/method-draw-image.png" class="site1-icon">
+                </span>
+                <span class="fn-size-3 fn-weight-6 white white-space side-text">
+                    داشبرد حمیدرضا
+                </span>
+            </div>
+
+            <div class="sidebar b-sm d-flex fd-column jc-space-between">
+                <div>
+                    <div class="d-flex ai-center p-2 sidebar-title spacer-white">
+                        <span class="white ml-1 side-icon">
+                            <i class="fa fa-home"></i>
+                        </span>
+
+                        <span class="fn-size-2 fn-weight-6 white-space side-text">
+                            <a href="index.html" class="white"> صفحه اصلی </a>
+                        </span>
+                    </div>
+
+                    <div class="d-flex ai-center p-2 sidebar-title spacer-white active">
+                        <span class="white ml-1 side-icon">
+                            <i class="fa fa-wpbeginner"></i>
+                        </span>
+
+                        <span class="fn-size-2 fn-weight-6 white-space side-text">
+                            <a href="wedget.html" class="white">ویجت ها</a>
+                        </span>
+                    </div>
+
+                    <div class="d-flex ai-center p-2 sidebar-title spacer-white">
+                        <span class="white ml-1 side-icon">
+                            <i class="fa fa-text-height"></i>
+                        </span>
+
+                        <span class="fn-size-2 fn-weight-6 white-space side-text">
+                            <a href="typography.html" class="white">تاپیوگرافی</a>
+                        </span>
+                    </div>
+
+                    <div class="d-flex ai-center p-2 sidebar-title spacer-white">
+                        <span class="white ml-1 side-icon">
+                            <i class="fa fa-user-md"></i>
+                        </span>
+
+                        <span class="fn-size-2 fn-weight-6 white-space side-text">
+                            <a href="profile.html" class="white">پروفایل و فرم ها</a>
+                        </span>
+                    </div>
+
+                    <div class="d-flex ai-center p-2 sidebar-title spacer-white">
+                        <span class="white ml-1 side-icon">
+                            <i class="fa fa-user-md"></i>
+                        </span>
+
+                        <span class="fn-size-2 fn-weight-6 white-space side-text">
+                            <a href="timeline.html" class="white">فعالیت ها</a>
+                        </span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="d-flex ai-center p-2 b-sm bb-no sidebar-title" id="closeSideBar">
+                        <span class="white ml-1 side-icon">
+                            <i class="fa fa-window-close"></i>
+                        </span>
+
+                        <span class="fn-size-3 fn-weight-6 white-space white side-text">
+                            بستن منو
+                        </span>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="content">
+            <div class="content-item pr-1">
+                <div class="widget-box p-3 b-smd dpad">
+
+                    <!-- accordion -->
+                    <div class="grid-4 grid-2-md grid-1-sm">
+                        <div>
+                            <button class="accordion with-icon btn gradient-default white ">
+                                اکاردئون
+                                <span class="btn-icon fa fa-arrow-circle-down"></span>
+                            </button>
+                            <div class="panel">
+                                <p>
+                                    به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button class="accordion with-icon btn gradient-primary white active-acc">
+                                اکاردئون
+                                <span class="btn-icon fa fa-caret-down"></span>
+                            </button>
+                            <div class="panel">
+                                <p>
+                                    و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button class="accordion with-icon btn gradient-danger white">
+                                اکاردئون
+                                <span class="btn-icon fa fa-toggle-down"></span>
+                            </button>
+                            <div class="panel">
+                                <p>
+                                    معمولا طراحان گرافیک برای صفحه‌آرایی، نخست از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند تا صرفا به مشتری یا صاحب کار خود نشان دهند که صفحه طراحی یا صفحه بندی شده بعد
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button class="accordion with-icon btn gradient-success white">
+                                اکاردئون
+                                <span class="btn-icon fa fa-angle-down fn-size-5"></span>
+                            </button>
+                            <div class="panel">
+                                <p>
+                                    از اینکه متن در آن قرار گیرد چگونه به نظر می‌رسد و قلم‌ها و اندازه‌بندی‌ها چگونه در نظر گرفته شده‌است. از آنجایی که طراحان عموما نویسنده متن نیستند و وظیفه رعایت
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- models -->
+                    <div class="grid-4 grid-2-md grid-1-sm">
+                        <button onclick="modelWidget1()" class="btn gradient-success pt-3 pb-3 "> کلیک کنید </button>
+                        <button onclick="modelWidget2()" class="btn gradient-danger pt-3 pb-3"> کلیک کنید </button>
+                        <button onclick="modelWidget3()" class="btn gradient-default pt-3 pb-3"> کلیک کنید </button>
+                        <button onclick="modelWidget4()" class="btn gradient-info pt-3 pb-3"> کلیک کنید </button>
+                    </div>
+
+                    <!-- tab navigation -->
+                    <div class="tab-mother white mt-3 d-none" data-type="tab-direction">
+
+                        <div class="tab tab-direction">
+                            <button class="tab-button btn gradient-default"> tab 1 </button>
+                            <button class="tab-button btn gradient-default"> tab 2 </button>
+                            <button class="tab-button btn gradient-default"> tab 3 </button>
+                            <button class="tab-button btn gradient-default"> tab 4 </button>
+                        </div>
+
+                        <div>
+                            <div class="tab-content active-tab">
+                                <p>
+                                    صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده
+                                </p>
+                            </div>
+
+
+                            <div class="tab-content">
+                                <p>
+                                    استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. معمولا طراحان گرافیک برای صفحه‌آرایی، نخست از متن‌های آزمایشی و بی‌معنی استفاده
+                                </p>
+                            </div>
+
+
+                            <div class="tab-content">
+                                <p>
+                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. معمولا طراحان گرافیک برای صفحه‌آرایی، نخست از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند تا
+                                </p>
+                            </div>
+
+
+                            <div class="tab-content">
+                                <p>
+                                    صرفا به مشتری یا صاحب کار خود نشان دهند که صفحه طراحی یا صفحه بندی شده بعد از اینکه متن در آن قرار گیرد چگونه به نظر می‌رسد و قلم‌ها و اندازه‌بندی‌ها چگونه در نظر گرفته شده‌است.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="white mt-2">
+
+                        <div class="grid-2-md">
+                            <button class="tab-button btn gradient-default"> tab 1 </button>
+                            <button class="tab-button btn gradient-default"> tab 2 </button>
+                            <button class="tab-button btn gradient-default"> tab 3 </button>
+                            <button class="tab-button btn gradient-default"> tab 4 </button>
+                        </div>
+
+                        <div>
+                            <div class="tab-content active-tab">
+                                <p>
+                                    صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده
+                                </p>
+                            </div>
+
+
+                            <div class="tab-content">
+                                <p>
+                                    استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. معمولا طراحان گرافیک برای صفحه‌آرایی، نخست از متن‌های آزمایشی و بی‌معنی استفاده
+                                </p>
+                            </div>
+
+
+                            <div class="tab-content">
+                                <p>
+                                    تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. معمولا طراحان گرافیک برای صفحه‌آرایی، نخست از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند تا
+                                </p>
+                            </div>
+
+
+                            <div class="tab-content">
+                                <p>
+                                    صرفا به مشتری یا صاحب کار خود نشان دهند که صفحه طراحی یا صفحه بندی شده بعد از اینکه متن در آن قرار گیرد چگونه به نظر می‌رسد و قلم‌ها و اندازه‌بندی‌ها چگونه در نظر گرفته شده‌است.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- title -->
+                    <div class="title mb-1">
+                        <h2> سلام دنیا </h2>
+                        <span>
+                            سلام وردپرس ، سلام PHP
+                        </span>
+                    </div>
+
+                    <div class="d-flex c-gap-4 jc-center">
+                        <!-- popUp -->
+                        <div class="d-flex jc-center">
+
+                            <div class="popup btn gradient-primary pop-top"> هاور
+                                <div class="popup-header w-20-px">
+                                    <span> پاپ آپ </span>
+                                    <p>
+                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی
+                                        مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- drop downs -->
+                        <div>
+                            <button class="btn gradient-primary btn-md with-icon c-gap-4 btn-drop-down white-space"> نام مد نظر شما
+                                <span class="btn-icon fn-size-5 fa fa-angle-down"></span>
+                            </button>
+                            <div class="drop-down-child" id="btn-drop-down-child">
+                                <li>
+                                    <a href="#"> ساخت فروشگاه </a>
+                                </li>
+                                <li>
+                                    <a href="#"> خرید از ما </a>
+                                </li>
+                                <li>
+                                    <a href="#"> ساخت از ما </a>
+                                </li>
+                                <li>
+                                    <a href="#"> گارانتی میشود </a>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- slider -->
+                    <div class="slide-container">
+
+                        <div class="slide" onclick="slideOpen(this.children[0].src)">
+                            <img src="https://unsplash.it/1300/1000">
+                        </div>
+
+                        <div class="slide" onclick="slideOpen(this.children[0].src)">
+                            <img src="https://unsplash.it/1400/1000">
+                        </div>
+
+                        <div class="slide" onclick="slideOpen(this.children[0].src)">
+                            <img src="https://unsplash.it/1200/1000">
+                        </div>
+
+                        <div class="slide" onclick="slideOpen(this.children[0].src)">
+                            <img src="https://unsplash.it/1500/1000">
+                        </div>
+
+                        <div class="btn-container">
+                            <span class="prev">
+                                &#10095;
+                            </span>
+
+                            <span class="next">
+                                &#10094;
+                            </span>
+                        </div>
+
+                        <div class="dots">
+                            <div class="dot active"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+
+                    <!-- grid > flex Sys -->
+                    <div class="flex">
+                        <div class="col-3 btn gradient-primary">
+                            به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه
+                        </div>
+
+                        <div class="col-3 btn gradient-danger">
+                            و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. معمولا
+                        </div>
+
+                        <div class="col-3 btn gradient-success">
+                            طراحان گرافیک برای صفحه‌آرایی، نخست از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند تا صرفا به مشتری یا صاحب کار خود نشان دهند که صفحه طراحی یا صفحه بندی
+                        </div>
+
+                        <div class="col-3 btn gradient-warning">
+                            شده بعد از اینکه متن در آن قرار گیرد چگونه به نظر می‌رسد و قلم‌ها و اندازه‌بندی‌ها چگونه در نظر گرفته شده‌است. از آنجایی که طراحان عموما نویسنده متن نیستند
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <footer class="grid-col-2 d-flex jc-space-between ai-center mt-1">
+            <span class="fn-size-2 white">
+                داشبرد حمیدرضا
+            </span>
+
+            <div>
+                <a href="#" class="btn-link fn-size-2 prl-1"> درباره ما </a>
+                <a href="#" class="btn-link fn-size-2 prl-1"> داشبرد حمیدرضا </a>
+                <a href="#" class="btn-link fn-size-2 prl-1"> وبلاگ </a>
+            </div>
+        </footer>
+
+    </div>
+
+</div>
+
+
+
+<script src="js/myCharts.js"></script>
+<script src="js/sweetalert2.min.js"></script>
+<script>
+    function model1() {
+        Swal.fire({
+            html: `
+                <h1> نام کشور را وارد کنید </h1>
+                <input id="swal-input2" class="swal2-input">
+            `,
+            customClass: {
+                confirmButton: 'btn gradient-success',
+            },
+            buttonsStyling: false,
+            confirmButtonText: 'افزودن',
+            showClass: {
+                popup: 'animate__animated animate__jackInTheBox'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__flipOutX'
+            }
+        }).then(() => {
+            Swal.fire({
+                title: 'اضافه شد',
+                html: 'کشور مد نظر شما به لیست کشور های پشتیبانی شده اضافه شد',
+                timer: 1500,
+                timerProgressBar: true,
+                willOpen: () => {
+                    Swal.showLoading()
+                    timerInterval = setInterval(() => {
+                        const content = Swal.getContent()
+                        if (content) {
+                            const b = content.querySelector('b')
+                            if (b) {
+                                b.textContent = Swal.getTimerLeft()
+                            }
+                        }
+                    }, 100)
+                },
+                willClose: () => {
+                    clearInterval(timerInterval)
+                },
+                buttonsStyling: false,
+                confirmButtonText: 'تایید',
+                customClass: {
+                    confirmButton: 'btn gradient-primary',
+                },
+            })
+        })
+    }
+
+    function model2() {
+        let timerInterval
+        Swal.fire({
+            title: 'بسته شونده به صورت خودکار !',
+            html: 'داره میره !',
+            timer: 2500,
+            timerProgressBar: true,
+            willOpen: () => {
+                Swal.showLoading()
+                timerInterval = setInterval(() => {
+                    const content = Swal.getContent()
+                    if (content) {
+                        const b = content.querySelector('b')
+                        if (b) {
+                            b.textContent = Swal.getTimerLeft()
+                        }
+                    }
+                }, 100)
+            },
+            willClose: () => {
+                clearInterval(timerInterval)
+            },
+            confirmButtonText: 'تایید',
+        })
+    }
+
+    function model3() {
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: 'btn gradient-success',
+            },
+            buttonsStyling: false
+        })
+
+        swalWithBootstrapButtons.fire({
+            title: 'روند افزایشی است !',
+            text: "و تا به امروز +۱۵۰،۰۰۰ نفشه ثبت شده است !",
+            icon: 'success',
+            confirmButtonText: 'بستن',
+            reverseButtons: true
+        })
+    }
+
+    function model4() {
+        Swal.fire(
+            'تا به امروز +۱۵۰،۰۰۰ نفشه ثبت شده است !',
+            'و روند افزایشی است !',
+            'success',
+        )
+    }
+
+    function modelNotif() {
+        /*Swal.fire({
+            position: 'top-start',
+            title: 'اضافه شد',
+            timer: 1500,
+            timerProgressBar: true,
+            willOpen: () => {
+                Swal.showLoading()
+                timerInterval = setInterval(() => {
+                    const content = Swal.getContent()
+                    if (content) {
+                        const b = content.querySelector('b')
+                        if (b) {
+                            b.textContent = Swal.getTimerLeft()
+                        }
+                    }
+                }, 100)
+            },
+
+            willClose: () => {
+                clearInterval(timerInterval)
+            },
+            buttonsStyling: false,
+            confirmButtonText: 'تایید',
+            customClass: {
+                confirmButton: 'btn gradient-primary',
+
+            },
+            showClass: {
+                popup: 'animate__animated animate__bounceInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__bounceOutRight'
+            }
+        })*/
+
+        var toastMixin = Swal.mixin({
+            toast: true,
+            icon: 'success',
+            title: 'General Title',
+            position: 'bottom-left',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            showClass: {
+                popup: 'animate__animated animate__bounceInUp'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__bounceOutLeft'
+            },
+        });
+
+        toastMixin.fire({
+            animation: true,
+            title: 'هشتار اضافه شد'
+        });
+    }
+
+    function modelWidget1() {
+        Swal.fire({
+            title: 'این یک دیالوگ است !',
+            icon: 'success',
+            text: 'به راحتی میتوانید دیالوگ های زیبا بسازید',
+            showClass: {
+                popup: 'animate__anima ted animate__flipInX'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__lightSpeedOutLeft'
+            },
+            customClass: {
+                confirmButton: 'btn gradient-success',
+            },
+            confirmButtonText: 'تایید',
+            buttonsStyling: false,
+        })
+    }
+
+    function modelWidget2() {
+        Swal.fire({
+            title: 'تصویر تصادفی !',
+            text: 'با استفاده از وبسایت unsplash تصویر تصادفی نمایش دهید',
+            imageUrl: 'https://unsplash.it/400/200',
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: 'Custom image',
+            customClass: {
+                image: 'b-sm',
+                confirmButton: 'btn gradient-default'
+            },
+            buttonsStyling: false,
+            confirmButtonText: 'تایید',
+            showCloseButton: true,
+        })
+    }
+
+    function modelWidget3() {
+        const { value: text } = Swal.fire({
+            input: 'textarea',
+            inputLabel: 'پیام مد نظر شما :',
+            inputPlaceholder: 'نظر خود را بنویسید ...',
+            inputAttributes: {
+                'aria-label': 'Type your message here'
+            },
+            showCancelButton: true,
+            buttonsStyling: false,
+            cancelButtonText: 'لغو',
+            confirmButtonText: 'تایید و ادامه',
+            customClass: {
+                input: 'resize-ver',
+                confirmButton: 'btn gradient-success',
+                cancelButton: 'btn gradient-danger',
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                swal.fire({
+                    title: 'آیا از ثبت نظر خود مطمئن هستید ؟',
+                    text: "این عملیات غیر قابل بازگشت خواهد بود !",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    cancelButtonText: 'انصراف و حذف نظر',
+                    confirmButtonText: 'تایید و انتشار',
+                    reverseButtons: true,
+                    buttonsStyling: false,
+                    customClass: {
+                        title: 'fn-size-8',
+                        confirmButton: 'btn gradient-success',
+                        cancelButton: 'btn gradient-danger',
+                    }
+                })
+            }
+        })
+    }
+
+    function modelWidget4() {
+        Swal.fire({
+            title: 'با پس زمینه اختصاصی !',
+            width: 400,
+            padding: '3em',
+            backdrop: 'rgba(0,0,123,0.4)',
+            confirmButtonText: 'تایید ',
+            buttonsStyling: false,
+            customClass: {
+                title: 'fn-size-8',
+                confirmButton: 'btn gradient-success'
+            }
+        })
+    }
+
+    function slideOpen(imgUrlSlide) {
+        Swal.fire({
+            imageUrl: imgUrlSlide,
+            imageAlt: 'Custom image',
+            customClass: {
+                image: 'b-sm mb-0 pb-0',
+                confirmButton: 'btn gradient-primary w-10 m-0'
+            },
+            buttonsStyling: false,
+            confirmButtonText: 'تایید',
+            showCloseButton: true,
+        })
+    }
+
+    function loginFormDis(x,y) {
+        document.getElementById('loginForm').style.display = 'flex';
+        document.getElementById('signInForm').style.display = 'none';
+        x.classList.replace('fb-1', 'fb-10')
+        y.nextElementSibling.classList.replace('fb-10', 'fb-1')
+    }
+
+    function SignInFormDis(x,y) {
+        document.getElementById('loginForm').style.display = 'none';
+        document.getElementById('signInForm').style.display = 'flex';
+        x.classList.replace('fb-1', 'fb-10')
+        y.previousElementSibling.classList.replace('fb-10', 'fb-1')
+    }
+
+    function openIt() {
+        Swal.fire({
+            html: `
+                <div class="log-reg text-align-right ptb-2">
+                    <div class="d-flex c-gap-1">
+                        <button class="btn gradient-info white-space fb-10" style="transition: all ease-in-out .5s" onclick="loginFormDis(this,this)"> ورود </button>
+                        <button class="btn gradient-success white-space fb-1" style="transition: all ease-in-out .5s;" onclick="SignInFormDis(this,this)"> ثبت نام </button>
+                    </div>
+                    <div>
+                        <form>
+
+                            <div class="d-flex fd-column r-gap-3" id="loginForm">
+
+                                <div class="form-group-item input-success input-text">
+                                    <input type="text" id="UserNameForLogin" placeholder="متن مورد نظر شما">
+                                    <label for="UserNameForLogin" class="input-label">نام کاربری</label>
+                                </div>
+
+                                <div class="form-group-item input-error input-text">
+                                    <input type="text" id="passwordForLogin" placeholder="متن مورد نظر شما" pattern="[0-9ا-ی]*">
+                                    <label for="passwordForLogin" class="input-label">رمز عبور</label>
+                                </div>
+
+                                <button class="btn gradient-primary"> ورود </button>
+                            </div>
+
+                            <div class="d-flex fd-column r-gap-3" id="signInForm">
+                                <div class="form-group-item input-text">
+                                    <input type="text" id="nameAndLastNameForSignIn" placeholder="متن مورد نظر شما" pattern="[0-9ا-ی]*">
+                                    <label for="nameAndLastNameForSignIn" class="input-label">نام و نام خانوادگی</label>
+                                </div>
+
+                                <div class="form-group-item input-success input-text">
+                                    <input type="text" id="UserNameForSignIn" placeholder="متن مورد نظر شما">
+                                    <label for="UserNameForSignIn" class="input-label">نام کاربری</label>
+                                </div>
+
+                                <div class="form-group-item input-error input-text">
+                                    <input type="text" id="passwordForSignIn" placeholder="متن مورد نظر شما" pattern="[0-9ا-ی]*">
+                                    <label for="passwordForSignIn" class="input-label">رمز عبور</label>
+                                </div>
+
+                                <button class="btn gradient-primary"> ثبت نام </button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            `,
+            showConfirmButton: false,
+            background: '#344675',
+            backdrop: `rgba(44, 62, 80,0.5)`,
+            showCloseButton: true,
+        })
+    }
+
+    function resNav() {
+        Swal.fire({
+            html: `
+                <div class="d-flex c-gap-2 ai-center fd-column">
+                    <button class="btn gradient-primary b-xl w-10 mt-2" onclick="openIt()"> حساب کاربری </button>
+
+                    <div class="d-flex ai-center w-10 mt-1">
+                        <input type="text" placeholder="جست جو ..." class="ptb-1 w-9">
+                        <span class="search-icon fn-size-3">
+                            <i class="fa fa-search"></i>
+                        </span>
+                    </div>
+
+                    <div class="mt-3">
+                        <span class="fn-size-6 mr-1 d-flex ai-center c-gap-2 cur-pointer" onclick="modelNotif()">
+                            <i class="fa fa-heartbeat color-light-warning"></i>
+                            <span class="fn-size-4 white"> افزودن یاد آور </span>
+                        </span>
+                    </div>
+
+                </div>
+            `,
+            showConfirmButton: false,
+            background: '#344675',
+            backdrop: `rgba(44, 62, 80,0.5)`,
+            showCloseButton: true,
+        })
+    }
+
+</script>
+<script src="js/zcss.js"></script>
+<script src="js/script.js"></script>
+</body>
+
+<!-- </body> -->
+</html>

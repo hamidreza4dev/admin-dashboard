@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link rel="stylesheet" href="css/Chart.min.css">
+    <link rel="stylesheet" href="css/zcss.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<div class="container">
+
+    <div class="navbar white mtb-1 d-flex jc-space-between ai-center">
+        <div class="d-flex c-gap-2 ai-center">
+            <div>
+                <img src="img/mike.jpg" class="b-xl user-person">
+            </div>
+            <h1 class="fn-size-3 m-0"> داشبورد من </h1>
+        </div>
+
+        <div class="d-flex c-gap-2 ai-center desktop-menu">
+            <button class="btn btn-sm gradient-primary b-xl" onclick="openIt()"> حساب کاربری </button>
+
+            <div class="search-box d-flex ai-center">
+                <input type="text" placeholder="جست جو ..." class="ptb-1">
+                <span class="search-icon fn-size-3">
+                    <i class="fa fa-search"></i>
+                </span>
+            </div>
+
+            <div>
+                <span class="fn-size-6 mr-1 cur-pointer">
+                    <i class="fa fa-heartbeat color-light-warning" onclick="modelNotif()"></i>
+                </span>
+            </div>
+
+        </div>
+
+        <span class="fn-size-10 mobile-menu pl-2" onclick="resNav()">
+            <i class="fa fa-bars white"></i>
+        </span>
+
+    </div>
+
+    <div class="main grid-0 c-gap-0 p-0">
+
+        <div class="side d-flex fd-column">
+
+            <div class="d-flex ai-center p-2 gradient-default mb-1 b-sm sidebar-title">
+                <span class="white ml-1 side-icon">
+                    <img src="img/method-draw-image.png" class="site1-icon">
+                </span>
+                <span class="fn-size-3 fn-weight-6 white white-space side-text">
+                    داشبرد حمیدرضا
+                </span>
+            </div>
+
+            <div class="sidebar b-sm d-flex fd-column jc-space-between">
+                <div>
+                    <div class="d-flex ai-center p-2 sidebar-title spacer-white">
+                        <span class="white ml-1 side-icon">
+                            <i class="fa fa-home"></i>
+                        </span>
+
+                        <span class="fn-size-2 fn-weight-6 white-space side-text">
+                            <a href="index.html" class="white"> صفحه اصلی </a>
+                        </span>
+                    </div>
+
+                    <div class="d-flex ai-center p-2 sidebar-title spacer-white">
+                        <span class="white ml-1 side-icon">
+                            <i class="fa fa-wpbeginner"></i>
+                        </span>
+
+                        <span class="fn-size-2 fn-weight-6 white-space side-text">
+                            <a href="wedget.html" class="white">ویجت ها</a>
+                        </span>
+                    </div>
+
+                    <div class="d-flex ai-center p-2 sidebar-title spacer-white">
+                        <span class="white ml-1 side-icon">
+                            <i class="fa fa-text-height"></i>
+                        </span>
+
+                        <span class="fn-size-2 fn-weight-6 white-space side-text">
+                            <a href="typography.html" class="white">تاپیوگرافی</a>
+                        </span>
+                    </div>
+
+                    <div class="d-flex ai-center p-2 sidebar-title spacer-white">
+                        <span class="white ml-1 side-icon">
+                            <i class="fa fa-user-md"></i>
+                        </span>
+
+                        <span class="fn-size-2 fn-weight-6 white-space side-text">
+                            <a href="profile.html" class="white">پروفایل و فرم ها</a>
+                        </span>
+                    </div>
+
+                    <div class="d-flex ai-center p-2 sidebar-title spacer-white active">
+                        <span class="white ml-1 side-icon">
+                            <i class="fa fa-user-md"></i>
+                        </span>
+
+                        <span class="fn-size-2 fn-weight-6 white-space side-text">
+                            <a href="timeline.html" class="white">فعالیت ها</a>
+                        </span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="d-flex ai-center p-2 b-sm bb-no sidebar-title" id="closeSideBar">
+                        <span class="white ml-1 side-icon">
+                            <i class="fa fa-window-close"></i>
+                        </span>
+
+                        <span class="fn-size-3 fn-weight-6 white-space white side-text">
+                            بستن منو
+                        </span>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="content">
+            <div class="content-item pr-1">
+
+                <div class="wrapper mrl-8 m-0">
+                    <div class="center-line">
+                        <a href="#" class="scroll-icon"><i class="fa fa-caret-up"></i></a>
+                    </div>
+
+                    <div class="row row-1">
+                        <section class="p-2">
+                            <i class="icon fa fa-home"></i>
+                            <div class="details">
+                                <span class="title mb-1 pt-1 white">انجام کار ها من</span>
+                                <span class="fn-size-3 gray-400"> ۱ فروردین ۱۴۰۰</span>
+                            </div>
+                            <p class="gray-400 text-align-justify hline-3 fn-size-3">
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                            </p>
+                            <div class="bottom">
+                                <a href="#" class="btn btn-md gradient-primary">بیشتر بخوانید</a>
+                                <i class="gray-300">حمیدرضا فیروزی</i>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="row row-2">
+                        <section class="p-2">
+                            <i class="icon fa fa-star"></i>
+                            <div class="details">
+                                <span class="title mb-1 pt-1 white">انجام کار ها من</span>
+                                <span class="fn-size-3 gray-400"> ۱ فروردین ۱۴۰۰</span>
+                            </div>
+                            <p class="gray-400 text-align-justify hline-3 fn-size-3">
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                            </p>
+                            <div class="bottom">
+                                <a href="#" class="btn btn-md gradient-primary">بیشتر بخوانید</a>
+                                <i class="gray-300">حمیدرضا فیروزی</i>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="row row-1">
+                        <section class="p-2">
+                            <i class="icon fa fa-rocket"></i>
+                            <div class="details">
+                                <span class="title mb-1 pt-1 white">انجام کار ها من</span>
+                                <span class="fn-size-3 gray-400"> ۱ فروردین ۱۴۰۰</span>
+                            </div>
+                            <p class="gray-400 text-align-justify hline-3 fn-size-3">
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                            </p>
+                            <div class="bottom">
+                                <a href="#" class="btn btn-md gradient-primary">بیشتر بخوانید</a>
+                                <i class="gray-300">حمیدرضا فیروزی</i>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="row row-2">
+                        <section class="p-2">
+                            <i class="icon fa fa-globe"></i>
+                            <div class="details">
+                                <span class="title mb-1 pt-1 white">انجام کار ها من</span>
+                                <span class="fn-size-3 gray-400"> ۱ فروردین ۱۴۰۰</span>
+                            </div>
+                            <p class="gray-400 text-align-justify hline-3 fn-size-3">
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                            </p>
+                            <div class="bottom">
+                                <a href="#" class="btn btn-md gradient-primary">بیشتر بخوانید</a>
+                                <i class="gray-300">حمیدرضا فیروزی</i>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="row row-1">
+                        <section class="p-2">
+                            <i class="icon fa fa-paper-plane"></i>
+                            <div class="details">
+                                <span class="title mb-1 pt-1 white">انجام کار ها من</span>
+                                <span class="fn-size-3 gray-400"> ۱ فروردین ۱۴۰۰</span>
+                            </div>
+                            <p class="gray-400 text-align-justify hline-3 fn-size-3">
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                            </p>
+                            <div class="bottom">
+                                <a href="#" class="btn btn-md gradient-primary">بیشتر بخوانید</a>
+                                <i class="gray-300">حمیدرضا فیروزی</i>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="row row-2">
+                        <section class="p-2">
+                            <i class="icon fa fa-map-marker"></i>
+                            <div class="details">
+                                <span class="title mb-1 pt-1 white">انجام کار ها من</span>
+                                <span class="fn-size-3 gray-400"> ۱ فروردین ۱۴۰۰</span>
+                            </div>
+                            <p class="gray-400 text-align-justify hline-3 fn-size-3">
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                            </p>
+                            <div class="bottom">
+                                <a href="#" class="btn btn-md gradient-primary">بیشتر بخوانید</a>
+                                <i class="gray-300">حمیدرضا فیروزی</i>
+                            </div>
+                        </section>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <footer class="grid-col-2 d-flex jc-space-between ai-center mt-1">
+            <span class="fn-size-2 white">
+                داشبرد حمیدرضا
+            </span>
+
+            <div>
+                <a href="#" class="btn-link fn-size-2 prl-1"> درباره ما </a>
+                <a href="#" class="btn-link fn-size-2 prl-1"> داشبرد حمیدرضا </a>
+                <a href="#" class="btn-link fn-size-2 prl-1"> وبلاگ </a>
+            </div>
+        </footer>
+
+    </div>
+
+</div>
+
+
+
+<script src="js/myCharts.js"></script>
+<script src="js/sweetalert2.min.js"></script>
+<script>
+    function model1() {
+        Swal.fire({
+            html: `
+                <h1> نام کشور را وارد کنید </h1>
+                <input id="swal-input2" class="swal2-input">
+            `,
+            customClass: {
+                confirmButton: 'btn gradient-success',
+            },
+            buttonsStyling: false,
+            confirmButtonText: 'افزودن',
+            showClass: {
+                popup: 'animate__animated animate__jackInTheBox'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__flipOutX'
+            }
+        }).then(() => {
+            Swal.fire({
+                title: 'اضافه شد',
+                html: 'کشور مد نظر شما به لیست کشور های پشتیبانی شده اضافه شد',
+                timer: 1500,
+                timerProgressBar: true,
+                willOpen: () => {
+                    Swal.showLoading()
+                    timerInterval = setInterval(() => {
+                        const content = Swal.getContent()
+                        if (content) {
+                            const b = content.querySelector('b')
+                            if (b) {
+                                b.textContent = Swal.getTimerLeft()
+                            }
+                        }
+                    }, 100)
+                },
+                willClose: () => {
+                    clearInterval(timerInterval)
+                },
+                buttonsStyling: false,
+                confirmButtonText: 'تایید',
+                customClass: {
+                    confirmButton: 'btn gradient-primary',
+                },
+            })
+        })
+    }
+
+    function model2() {
+        let timerInterval
+        Swal.fire({
+            title: 'بسته شونده به صورت خودکار !',
+            html: 'داره میره !',
+            timer: 2500,
+            timerProgressBar: true,
+            willOpen: () => {
+                Swal.showLoading()
+                timerInterval = setInterval(() => {
+                    const content = Swal.getContent()
+                    if (content) {
+                        const b = content.querySelector('b')
+                        if (b) {
+                            b.textContent = Swal.getTimerLeft()
+                        }
+                    }
+                }, 100)
+            },
+            willClose: () => {
+                clearInterval(timerInterval)
+            },
+            confirmButtonText: 'تایید',
+        })
+    }
+
+    function model3() {
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: 'btn gradient-success',
+            },
+            buttonsStyling: false
+        })
+
+        swalWithBootstrapButtons.fire({
+            title: 'روند افزایشی است !',
+            text: "و تا به امروز +۱۵۰،۰۰۰ نفشه ثبت شده است !",
+            icon: 'success',
+            confirmButtonText: 'بستن',
+            reverseButtons: true
+        })
+    }
+
+    function model4() {
+        Swal.fire(
+            'تا به امروز +۱۵۰،۰۰۰ نفشه ثبت شده است !',
+            'و روند افزایشی است !',
+            'success',
+        )
+    }
+
+    function modelNotif() {
+        /*Swal.fire({
+            position: 'top-start',
+            title: 'اضافه شد',
+            timer: 1500,
+            timerProgressBar: true,
+            willOpen: () => {
+                Swal.showLoading()
+                timerInterval = setInterval(() => {
+                    const content = Swal.getContent()
+                    if (content) {
+                        const b = content.querySelector('b')
+                        if (b) {
+                            b.textContent = Swal.getTimerLeft()
+                        }
+                    }
+                }, 100)
+            },
+
+            willClose: () => {
+                clearInterval(timerInterval)
+            },
+            buttonsStyling: false,
+            confirmButtonText: 'تایید',
+            customClass: {
+                confirmButton: 'btn gradient-primary',
+
+            },
+            showClass: {
+                popup: 'animate__animated animate__bounceInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__bounceOutRight'
+            }
+        })*/
+
+        var toastMixin = Swal.mixin({
+            toast: true,
+            icon: 'success',
+            title: 'General Title',
+            position: 'bottom-left',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            showClass: {
+                popup: 'animate__animated animate__bounceInUp'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__bounceOutLeft'
+            }
+        });
+
+        toastMixin.fire({
+            animation: true,
+            title: 'هشتار اضافه شد'
+        });
+    }
+
+
+    function loginFormDis(x,y) {
+        document.getElementById('loginForm').style.display = 'flex';
+        document.getElementById('signInForm').style.display = 'none';
+        x.classList.replace('fb-1', 'fb-10')
+        y.nextElementSibling.classList.replace('fb-10', 'fb-1')
+    }
+
+    function SignInFormDis(x,y) {
+        document.getElementById('loginForm').style.display = 'none';
+        document.getElementById('signInForm').style.display = 'flex';
+        x.classList.replace('fb-1', 'fb-10')
+        y.previousElementSibling.classList.replace('fb-10', 'fb-1')
+    }
+
+    function openIt() {
+        Swal.fire({
+            html: `
+                <div class="log-reg text-align-right ptb-2">
+                    <div class="d-flex c-gap-1">
+                        <button class="btn gradient-info white-space fb-10" style="transition: all ease-in-out .5s" onclick="loginFormDis(this,this)"> ورود </button>
+                        <button class="btn gradient-success white-space fb-1" style="transition: all ease-in-out .5s;" onclick="SignInFormDis(this,this)"> ثبت نام </button>
+                    </div>
+                    <div>
+                        <form>
+
+                            <div class="d-flex fd-column r-gap-3" id="loginForm">
+
+                                <div class="form-group-item input-success input-text">
+                                    <input type="text" id="UserNameForLogin" placeholder="متن مورد نظر شما">
+                                    <label for="UserNameForLogin" class="input-label">نام کاربری</label>
+                                </div>
+
+                                <div class="form-group-item input-error input-text">
+                                    <input type="text" id="passwordForLogin" placeholder="متن مورد نظر شما" pattern="[0-9ا-ی]*">
+                                    <label for="passwordForLogin" class="input-label">رمز عبور</label>
+                                </div>
+
+                                <button class="btn gradient-primary"> ورود </button>
+                            </div>
+
+                            <div class="d-flex fd-column r-gap-3" id="signInForm">
+                                <div class="form-group-item input-text">
+                                    <input type="text" id="nameAndLastNameForSignIn" placeholder="متن مورد نظر شما" pattern="[0-9ا-ی]*">
+                                    <label for="nameAndLastNameForSignIn" class="input-label">نام و نام خانوادگی</label>
+                                </div>
+
+                                <div class="form-group-item input-success input-text">
+                                    <input type="text" id="UserNameForSignIn" placeholder="متن مورد نظر شما">
+                                    <label for="UserNameForSignIn" class="input-label">نام کاربری</label>
+                                </div>
+
+                                <div class="form-group-item input-error input-text">
+                                    <input type="text" id="passwordForSignIn" placeholder="متن مورد نظر شما" pattern="[0-9ا-ی]*">
+                                    <label for="passwordForSignIn" class="input-label">رمز عبور</label>
+                                </div>
+
+                                <button class="btn gradient-primary"> ثبت نام </button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            `,
+            showConfirmButton: false,
+            background: '#344675',
+            backdrop: `rgba(44, 62, 80,0.5)`,
+            showCloseButton: true,
+        })
+    }
+
+    function resNav() {
+        Swal.fire({
+            html: `
+                <div class="d-flex c-gap-2 ai-center fd-column">
+                    <button class="btn gradient-primary b-xl w-10 mt-2" onclick="openIt()"> حساب کاربری </button>
+
+                    <div class="d-flex ai-center w-10 mt-1">
+                        <input type="text" placeholder="جست جو ..." class="ptb-1 w-9">
+                        <span class="search-icon fn-size-3">
+                            <i class="fa fa-search"></i>
+                        </span>
+                    </div>
+
+                    <div class="mt-3">
+                        <span class="fn-size-6 mr-1 d-flex ai-center c-gap-2 cur-pointer" onclick="modelNotif()">
+                            <i class="fa fa-heartbeat color-light-warning"></i>
+                            <span class="fn-size-4 white"> افزودن یاد آور </span>
+                        </span>
+                    </div>
+
+                </div>
+            `,
+            showConfirmButton: false,
+            background: '#344675',
+            backdrop: `rgba(44, 62, 80,0.5)`,
+            showCloseButton: true,
+        })
+    }
+
+</script>
+<script src="js/Chart.min.js"></script>
+<script src="js/zcss.js"></script>
+<script src="js/script.js"></script>
+</body>
+
+<!-- </body> -->
+</html>
